@@ -12,9 +12,9 @@ strategy_description = 'How does this strategy decide?'
     
 def move(my_history, their_history, my_score, their_score):
     ''' Arguments accepted: my_history, their_history are strings.
-    my_score, their_score are ints.
-    
-    Make my move.
+    my_score, their_score are ints.'''
+    return 'b'
+    '''Make my move.
     Returns 'c' or 'b'. 
     '''
 
