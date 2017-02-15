@@ -7,8 +7,8 @@
 ####
 
 team_name = 'Hacks4Hire' # Only 10 chars displayed.
-strategy_name = 'The name the team gives to this strategy'
-strategy_description = 'How does this strategy decide?'
+strategy_name = 'Test Of Faith'
+strategy_description = 'First betray then if they betray betray, but if the collude then collude, but if they collude 2 times in a row betray'
     
 def move(my_history, their_history, my_score, their_score):
     ''' Arguments accepted: my_history, their_history are strings.
@@ -17,10 +17,12 @@ def move(my_history, their_history, my_score, their_score):
         return 'b'
     elif their_history[-1] == 'b':
         return 'b'
-    elif their_history[-1] == 'c' and their_history[-2] == 'c':
-        return 'b'
     elif their_history[-1] == 'c':
-        return 'c'
+        if len(their_history)>= 2:
+            if their_history[-2] == 'c':
+                return 'b'
+        else:
+            return 'c'
     '''Make my move.
     Returns 'c' or 'b'. 
     '''
